@@ -8,7 +8,7 @@ tags: db oracle
 * content
 {:toc}
 
-##取表：
+## 取表
 
 ```sql
 select table_name from user_tables; //当前用户的表       
