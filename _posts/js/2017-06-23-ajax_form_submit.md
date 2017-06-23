@@ -21,6 +21,7 @@ request.open("POST", "submitform.php");
 request.send(new FormData(formElement));
 ```
 * 创建FormData对象
+
 ```js
 var formData = new FormData();
 
@@ -43,7 +44,9 @@ request.send(formData);
 
 > (FormData 对象的字段类型可以是 Blob, File, 或者 string: 如果它的字段类型不是Blob也不是File，则会被转换成字符串类型。
 
+
 # JQuery form回调函数提交
+
 ```js
 // 不带文件上传的form回调提交
 $("#ajaxform").submit(function(e)
@@ -101,8 +104,6 @@ $("#multiform").submit(); //Submit the form
 ```
 # JQuery FormData对象上传文件
 
-* HTML表单FormData初始化
-
 ```js
 $.ajax({
   url: 'php/upload.php',
@@ -116,12 +117,13 @@ $.ajax({
   }
 });
 ```
+
 > **注意**  
 > *contentType：false* //强制JQuery不添加Content-Type头部，否则文件上传的分割线（boundary string）將丢失；
 > *processData:false* //如果设置为true JQuery则会將内容转换为string，这是错误的
 
 
-相关链接：
+相关链接：   
 [https://developer.mozilla.org/zh-CN/docs/Web/API/FormData/Using_FormData_Objects](https://developer.mozilla.org/zh-CN/docs/Web/API/FormData/Using_FormData_Objects)
 
 [https://stackoverflow.com/questions/5392344/sending-multipart-formdata-with-jquery-ajax](https://stackoverflow.com/questions/5392344/sending-multipart-formdata-with-jquery-ajax)
