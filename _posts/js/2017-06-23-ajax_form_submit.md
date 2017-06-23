@@ -11,7 +11,8 @@ tags: ajax
 # 原生FormData对象使用
 
 * HTML创建form对象
-```
+
+```js
 var formElement = document.querySelector("form");
 //或者这种写法
 //var formData = new FormData(someFormElement);
