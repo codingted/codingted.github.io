@@ -8,7 +8,7 @@ tags: chrome
 * content
 {:toc}
 
-#chrome 常用快捷键（linux)
+# chrome 常用快捷键（linux)
 
 ## 标签页和窗口
 

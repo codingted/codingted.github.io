@@ -45,6 +45,9 @@ type: page
 - [google fonts](https://fonts.google.com/)
   - [Google Fonts 加速代理](https://fengmk2.com/blog/2016/google-fonts-mirror)
 
+* chrome 插件
+  * AdBlock, Octotree, Postman, Postman Interceptor,switchyOmega, User_agent switcher, 有道云笔记, 有道翻译, devdocs
+
 ## 编程语言
 
 ### JavaScript
