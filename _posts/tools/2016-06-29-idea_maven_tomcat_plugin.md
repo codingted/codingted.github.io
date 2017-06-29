@@ -36,11 +36,11 @@ mvn clean tomcat7:run
 
 * 添加maven的Run/Debug项（Run->Edit Config）
 
-![选择maven](./img/idea_debug.jpg)
+![选择maven](http://www.codingted.com:9090/tool/img/idea_debug.jpg)
 
 * 填写相应的命令
 
-![填写运行命令](./img/idea_debug_2.jpg)
+![填写运行命令](http://www.codingted.com:9090/tool/img/idea_debug_2.jpg)
 
 > 这样只要进行debug启动就可以调试了但是，改完以后idea是不会自动部署的。
 
@@ -51,6 +51,7 @@ mvn clean tomcat7:run
 ### 相关的步骤如下
 
 * 修改tomcat的tomcat-users.xml
+
 ```xml
 <role rolename="admin"/>
 <role rolename="admin-gui"/>
@@ -61,6 +62,7 @@ mvn clean tomcat7:run
 <role rolename="manager-status"/>
 <user username="admin" password="admin" roles="admin,manager,manager-gui,admin-gui,manager-script,manager-jmx,manager-status"/>
 ```
+
 * 修改的pom文件的配置
 
 ```xml
@@ -80,6 +82,7 @@ mvn clean tomcat7:run
   </configuration>
 </plugin>
 ```
+
 * 修改maven的setting.xml文件
 
 编辑**~/.m2/setting.xml** 添加如下内容：
@@ -95,6 +98,7 @@ mvn clean tomcat7:run
   </servers>
 </settings>
 ```
+
 > 现在可以通过命令行来启动tomcat（**注意：是在外部不是通过mvn tomcat7:run进行启动的，因为这种条件下启动的配置和通过tomcat命令启动是不同的**）
 
 现在通过**mvn tomcat7:deploy**进行部署就可以了
