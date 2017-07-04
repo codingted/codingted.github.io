@@ -3,6 +3,7 @@ layout: post
 title: Ajax form表单提交
 categories: js
 tags: ajax
+comments: true
 ---
 
 * content

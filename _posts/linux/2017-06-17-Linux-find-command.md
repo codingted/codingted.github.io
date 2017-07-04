@@ -3,6 +3,7 @@ layout: post
 title: linux find command
 categories: linux
 tags: linux find
+comments: true
 ---
 
 * content

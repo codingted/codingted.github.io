@@ -3,6 +3,7 @@ layout: post
 title:  "java volatile 关键字"
 categories: java
 tags: core_java
+comments: true
 ---
 
 * content

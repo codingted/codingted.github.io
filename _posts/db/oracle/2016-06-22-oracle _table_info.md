@@ -3,6 +3,7 @@ layout: post
 title:  oracle常用查看表结构
 categories: db oracle
 tags: db oracle
+comments: true
 ---
 
 * content

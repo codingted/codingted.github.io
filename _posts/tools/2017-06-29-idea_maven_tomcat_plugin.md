@@ -3,6 +3,7 @@ layout: post
 title: IDEA配置maven tomcat插件Debug/热部署
 categories: tools
 tags: idea
+comments: true
 ---
 
 * content

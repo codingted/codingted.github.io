@@ -3,6 +3,7 @@ layout: post
 title:  mysql时间函数
 categories: db mysql
 tags: mysql 数据库函数
+comments: true
 ---
 
 * content

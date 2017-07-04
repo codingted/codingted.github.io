@@ -3,6 +3,7 @@ layout: post
 title: 多Github账户SSH-Key配置
 category: tools
 tags: ssh-key Github
+comments: true
 ---
 
 * content

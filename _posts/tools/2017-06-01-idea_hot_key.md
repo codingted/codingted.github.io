@@ -3,6 +3,7 @@ layout: post
 title: idea快捷键
 categories: tools
 tags: idea
+comments: true
 ---
 
 * content
