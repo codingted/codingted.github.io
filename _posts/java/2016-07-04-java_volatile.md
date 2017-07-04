@@ -42,7 +42,7 @@ public class Singleton {
 
 # 内存中变量的操作
 
-![内存模型]({{img_server}}/tools/img/java_volatile.jpg)
+![内存模型]({{ site.img_server }}/tools/img/java_volatile.jpg)
 
 JAVA 内存模型定义了八种操作来完成主内存和工作内存的变量访问,具体
 如下:
