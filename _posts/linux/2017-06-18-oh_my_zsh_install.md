@@ -2,7 +2,7 @@
 layout: post
 title: oh my zsh install
 categories: linux
-tags: zsh shell
+tags: shell
 comments: true
 ---
 

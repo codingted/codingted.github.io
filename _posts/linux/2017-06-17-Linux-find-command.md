@@ -2,7 +2,7 @@
 layout: post
 title: linux find command
 categories: linux
-tags: linux find
+tags: find
 comments: true
 ---
 
