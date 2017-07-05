@@ -63,7 +63,7 @@ git clone git@codingted.github.com:codingted/xxx.git
 ```
 > 如果先前已经克隆了项目,先在需要重新关联项目
 
-```GIT
+```
 git remote rm origin
 ## ssh
 git remote add origin git@codingted.github.com:codingted/xxx.git
