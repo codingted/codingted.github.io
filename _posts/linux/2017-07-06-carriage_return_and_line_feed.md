@@ -19,6 +19,7 @@ Unix系统里，每行结尾只有“<换行>”，即“\n”；Windows系统�
 * 回车符：\r=0x0d (13) return； #回车（carriage return）   
 * 换行符：\n=0x0a (10) newline。#换行（newline）
 
+
 > 文本文件的行结束符:
 > * 传统上 PC机 用 CRLF;
 > * 苹果机用CR;
