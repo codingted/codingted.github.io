@@ -37,11 +37,11 @@ mvn clean tomcat7:run
 
 * 添加maven的Run/Debug项（Run->Edit Config）
 
-![选择maven](http://www.codingted.com:9090/tool/img/idea_debug.jpg)
+![选择maven](http://www.codingted.com:9090/tools/img/idea_debug.jpg)
 
 * 填写相应的命令
 
-![填写运行命令](http://www.codingted.com:9090/tool/img/idea_debug_2.jpg)
+![填写运行命令](http://www.codingted.com:9090/tools/img/idea_debug_2.jpg)
 
 > 这样只要进行debug启动就可以调试了但是，改完以后idea是不会自动部署的。
 
