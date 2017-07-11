@@ -30,8 +30,8 @@ img_server: http://www.codingted.com:9090
 # two ways to comment, only choose one, and use your own short name
 # 两种评论插件，选一个就好了，使用自己的 short_name
 duoshuo_shortname: #codingted
-disqus_shortname: #www-codingted-com
-netease_gentie: 02e02a1dc85445b392757f6b7c96cccf
+disqus_shortname: www-codingted-com
+netease_gentie: #02e02a1dc85445b392757f6b7c96cccf
 
 # statistic analysis 统计代码
 # 百度统计 id，将统计代码替换为自己的百度统计id，即
