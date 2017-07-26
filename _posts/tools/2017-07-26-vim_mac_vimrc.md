@@ -11,6 +11,7 @@ comments: true
 
 # vim 配置文件备份 
 
+参考链接：[http://www.jianshu.com/p/9fa9bedc259a](http://www.jianshu.com/p/9fa9bedc259a)
 ```
 " 显示行号
 set number
