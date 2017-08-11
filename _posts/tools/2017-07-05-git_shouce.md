@@ -181,6 +181,9 @@ $ git log --pretty=format:"%h - %an, %ar : %s"
 
 # 添加 --graph 显示分支分支衍合
 $ git log --pretty=format:"%h %s" --graph
+
+# 统计个人代码
+git log --author="codingted" --pretty=format:"%cd : %s" 
 ```
 ## 分支
 
