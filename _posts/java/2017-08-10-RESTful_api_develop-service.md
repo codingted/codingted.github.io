@@ -2,7 +2,7 @@
 layout: post
 title:  "接口开发从前到后-后端开发"
 categories: java
-tags: API
+tags: API 接口
 comments: true
 ---
 
@@ -13,7 +13,6 @@ comments: true
 
 * jdk1.7
 * spring 3.0.5
-*
 
 # 后端controller
 
@@ -76,13 +75,13 @@ public class BookController {
 
 ```
 
-> @Controller : 注解该类是用来处理HTTP请求的
-> @RequestMapping : 注解使用的HTTP方法（GET/POST/PUT/DELETE),HTTP的header,URIs
-> @PathVariable : 注入URI中“{}”中的内容
-> @RequestParam : 注入URL中“？”后边的参数
-> @RequestHeader: 注入通过header传递的参数
-> @RequestBody  : 注入requestBody参数（json/xml...）
-> @ResponseBody : 將返回的对象序列化（通过HttpMessageConverter）
+> @Controller : 注解该类是用来处理HTTP请求的    
+> @RequestMapping : 注解使用的HTTP方法（GET/POST/PUT/DELETE),HTTP的header,URIs  
+> @PathVariable : 注入URI中“{}”中的内容     
+> @RequestParam : 注入URL中“？”后边的参数   
+> @RequestHeader: 注入通过header传递的参数  
+> @RequestBody  : 注入requestBody参数（json/xml...）    
+> @ResponseBody : 將返回的对象序列化（通过HttpMessageConverter）    
 
 
 ## HttpMessageConverter
@@ -129,8 +128,7 @@ form表单提交(multipart/form-data)   | 接收Object类型的参数
 
 > application/x-www-form-urlencoded和multipart/form-data
 >
-> form提交时默认为application/x-www-form-urlencoded。
-> 当action为get时候，浏览器用x-www-form-urlencoded的编码方式把form数据转换成一个字串（name1=value1&name2=value2...），在这个过程中会將no-alphanumeric字符替换为'%HH'(一个百分号加两个16进制的ASCII码)的形式,然后把这个字串append到url后面，用?分割，加载这个新的url。
-> 当action为post时候，浏览器把form数据封装到http body中，然后发送到server。
-> 如果没有type=file的控件，用默认的application/x-www-form-urlencoded就可以了。 但是如果有type=file的话，就要用到multipart/form-data了。浏览器会把整个表单以控件为单位分割，并为每个部分加上Content-Disposition(form-data或者file),Content-Type(默认为text/plain),name(控件name)等信息，并加上分割符(boundary)。
-
+> form提交时默认为application/x-www-form-urlencoded。   
+> 当action为get时候，浏览器用x-www-form-urlencoded的编码方式把form数据转换成一个字串（name1=value1&name2=value2...），在这个过程中会將no-alphanumeric字符替换为'%HH'(一个百分号加两个16进制的ASCII码)的形式,然后把这个字串append到url后面，用?分割，加载这个新的url。   
+> 当action为post时候，浏览器把form数据封装到http body中，然后发送到server。     
+> 如果没有type=file的控件，用默认的application/x-www-form-urlencoded就可以了。 但是如果有type=file的话，就要用到multipart/form-data了。浏览器会把整个表单以控件为单位分割，并为每个部分加上Content-Disposition(form-data或者file),Content-Type(默认为text/plain),name(控件name)等信息，并加上分割符(boundary)。 
