@@ -37,12 +37,6 @@ import java.util.Map;
 @RequestMapping("/books")
 public class BookController {
 
-
-
-
-
-
-
     @Resource
     private IBookService bookService;
 
@@ -80,6 +74,11 @@ public class BookController {
 }
 
 ```
+
+
+
+
+
 
 > @Controller : 注解该类是用来处理HTTP请求的    
 > @RequestMapping : 注解使用的HTTP方法（GET/POST/PUT/DELETE),HTTP的header,URIs  
