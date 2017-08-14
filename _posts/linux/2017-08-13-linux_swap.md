@@ -32,7 +32,17 @@ $ cat /proc/swaps
 ## 添加交换分区
 
 ```
+# 设置交换分区(分区文件中的数据会丢失)
+# mkswap /dev/sdxy
 
+# 启用交换分区
+# swapon /dev/sdxy
+
+# 启动系统加载swap分区（编辑/etc/fstab）
+UUID=<UUID> none swap default 0 0
+
+# 查询分区UUID
+# lsblk -no UUID /dev/sdxy
 ```
 
 ## 添加交换文件
