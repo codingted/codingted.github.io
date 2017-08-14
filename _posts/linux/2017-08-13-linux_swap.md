@@ -23,6 +23,10 @@ $ swapon -show
 $ cat /proc/swaps
 ```
 
+
+
+
+
 # 添加swap分区
 
 可以在安装系统的时候创建swap分区，当然在系统安装好后如果想扩展swap分区有两种方式：
