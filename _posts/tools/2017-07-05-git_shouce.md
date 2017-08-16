@@ -250,6 +250,9 @@ $ git tag -d [tag]
 # 删除远程tag
 $ git push origin :refs/tags/[tagName]
 
+# 将本地分支推送到远程
+$ git push origin localName:remoteName
+
 # 查看tag信息
 $ git show [tag]
 
