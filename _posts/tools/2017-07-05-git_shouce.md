@@ -124,6 +124,9 @@ $ git shortlog -sn
 # 显示指定文件是什么人在什么时间修改过
 $ git blame [file]
 
+# 显示文件的修改历史（包含文件的修改内容）
+$ git log -p fileName
+
 # 显示暂存区和工作区的差异
 $ git diff
 
