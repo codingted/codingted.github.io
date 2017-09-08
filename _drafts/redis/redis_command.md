@@ -58,3 +58,12 @@
 > getbit key 10
 > getbit key 11
 ```
+
+
+# 
+
+* SET、GET、APPEND、STRLEN等命令只能对字符串键执行
+* HDEL、HSET、HGET、HLEN等命令只能对哈希键执行；
+* RPUSH、LPOP、LINSERT、LLEN等命令只能对列表键执行；
+* SADD、SPOP、SINTER、SCARD等命令只能对集合键执行；
+* ZADD、ZCARD、ZRANK、ZSCORE等命令只能对有序集合键执行；
