@@ -31,6 +31,12 @@ struct sdshdr {
 
 此时 *lenth=3* *free=3*
 
+
+
+
+
+
+
 ## SDS实现和C字符串的区别
 
 * 为了保证效率，SDS记录了字符串的长度 len,所以SDS获取长度为O(1),但是C取字符串长度是O(n),所以STRLEN命令的时间复杂度为O(1)
