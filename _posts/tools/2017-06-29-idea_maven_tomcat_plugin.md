@@ -37,7 +37,7 @@ mvn clean tomcat7:run
 
 * 添加maven的Run/Debug项（Run->Edit Config）
 
-![选择maven](www.codingted.com:9090/tools/img/idea_debug.jpg)
+![选择maven]({{ site.img_server }}/tools/img/idea_debug.jpg)
 
 * 填写相应的命令
 

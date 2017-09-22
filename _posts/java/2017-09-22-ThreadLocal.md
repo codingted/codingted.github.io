@@ -75,7 +75,7 @@ public void set(T value) {
         createMap(t, value);
 }
 ```
-![threadLocalMap](www.codingted.com:9090/java/img/threadLocal.jpg)
+![threadLocalMap]({{ site.img_server }}/java/img/threadLocal.jpg)
 
 ## get
 
@@ -206,7 +206,7 @@ static class ThreadLocalMap {
 
 key是对ThreadLocal的一个弱引用,所以在ThreadLocal没有强引用指向它时,在系统执行GC时是不会组织对ThreadLocal的回收,此时key为null,无法对value进行访问了
 
-![弱引用](www.codingted.com:9090/java/img/threadLocal_weekref.jpg)
+![弱引用]({{ site.img_server }}/java/img/threadLocal_weekref.jpg)
 
 ### set
 
