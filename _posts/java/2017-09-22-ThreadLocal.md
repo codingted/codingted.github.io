@@ -14,7 +14,7 @@ ThreadLocal是为每个线程保存了单独的变量副本,在线程内可以�
 
 # 示例代码
 
-```
+```java
 public class Foo
 {
     // SimpleDateFormat is not thread-safe, so give one to each thread
@@ -51,7 +51,7 @@ public void remove()     | 移除线程变量副本
 
 ## set
 
-```
+```java
 /**
  * Sets the current thread's copy of this thread-local variable
  * to the specified value.  Most subclasses will have no need to
@@ -79,7 +79,7 @@ public void set(T value) {
 
 ## get
 
-```
+```java
 /**
  * Returns the value in the current thread's copy of this
  * thread-local variable.  If the variable has no value for the
@@ -105,7 +105,7 @@ public T get() {
 ```
 
 ThreadLocalMap 是ThreadLocal的一个静态内部类,在每个线程中都有一个ThreadLocalMap对象,用于存储线程本地变量
-```
+```java
 /* ThreadLocal values pertaining to this thread. This map is maintained
  * by the ThreadLocal class. */
 ThreadLocal.ThreadLocalMap threadLocals = null;
@@ -114,7 +114,7 @@ ThreadLocal.ThreadLocalMap threadLocals = null;
 线程获取本地变量是一个什么过程?
 > ThreadLocalMap 获取ThreadLocal对应的本地变量
 
-```
+```java
 /**
  * Get the entry associated with key.  This method
  * itself handles only the fast path: a direct hit of existing
@@ -141,7 +141,7 @@ private Entry getEntry(ThreadLocal<?> key) {
 
 >ThreadLocal关于产生hashcode的相关代码
 
-```
+```java
 //final变量,区分不同的ThreadLocal实例
 private final int threadLocalHashCode = nextHashCode();
 
@@ -159,7 +159,7 @@ private static int nextHashCode() {
 **为什么魔数这么神奇**
 让我们在本地验证一下,编辑文件名为 `magic_number.sh`的文件,输入以下shell脚本:
 
-```
+```bash
 #!/bin/bash
 
 MAGIC_CODE=0x61c88647
@@ -176,7 +176,7 @@ done
 ```
 运行一下
 
-```
+```bash
 sh magic_number.sh 32
 #结果为:
 14 21 28 3 10 17 24 31 6 13 20 27 2 9 16 23 30 5 12 19 26 1 8 15 22 29 4 11 18 25 0 7
@@ -186,7 +186,7 @@ sh magic_number.sh 32
 
 线程中保存本地变量的结构,值得注意的是,map中每个本地变量的实体
 
-```
+```java
 static class ThreadLocalMap {
 
     //存储本地变量的实体,初始Entry[]数组的大小为16超过数组容量的2/3进行扩容
@@ -210,7 +210,7 @@ key是对ThreadLocal的一个弱引用,所以在ThreadLocal没有强引用指向
 
 ### set
 
-```
+```java
 /**
  * Set the value associated with key.
  *
