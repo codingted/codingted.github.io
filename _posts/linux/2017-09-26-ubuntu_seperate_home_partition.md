@@ -27,6 +27,13 @@ windows+ubuntu双系统(平时是在ubuntu下使用的,windows作为备份),因�
 * 重新分区,扩展容量
     小幅度的调整系统中的存储空间的分配(本文就选择的这种方法)
 
+
+
+
+
+
+
+
 # 扩展分区
 
 ## 目标分区
@@ -35,12 +42,6 @@ windows+ubuntu双系统(平时是在ubuntu下使用的,windows作为备份),因�
 
 * 將原windows的D:分区变为ubuntu的/home分区;
 * 將原windows的C:盘分出250G的空间作为ubuntu的/home分区的备份分区
-
-
-
-
-
-
 
 ## windows操作
 
