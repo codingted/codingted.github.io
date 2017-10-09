@@ -1,3 +1,15 @@
+---
+layout: post
+title:  "面向对象设计原则"
+categories: translate
+tags: 设计模式
+comments: true
+---
+
+* content
+{:toc}
+
+
 # 设计原则
 -----------
 
@@ -8,6 +20,12 @@
 * 不易变(Rigidity) - 改变现有的程序是困难的,每一个改变將影响系统其它部分的改变.
 * 脆弱(Fragility) - 当你改变某一个部分时,会导致系统其它部分意想不到的错误.
 * 固定(Immobility) - 只能服务于当前系统,不能被其它系统很好的复用.
+
+
+
+
+
+
 
 ### 开闭原则(Open Close Principle)
 
@@ -52,33 +70,4 @@ OPC是一个通用原则.在写代码的过程中你应该确保当你需要扩�
 
 李氏替换原则由Barbara Liskov在1987年的Object Oriented Programing Systems Languages and Applications 会议上首先提出.[数据抽象和继承](https://dl.acm.org/citation.cfm?id=62141)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+原文链接:[http://www.oodesign.com/open-close-principle.html](http://www.oodesign.com/open-close-principle.html)
