@@ -75,7 +75,7 @@ comments: true
 * 不需要去了解GraphicEditor类内部的逻辑.
 * 因为绘图方法移到了具体的类中,降低了因为修改对其它方法造成的风险.
 
-![ocp.good]({{ site.img_server }}/translate/img/opc.good.gif)
+![ocp.good]({{ site.img_server }}/translate/img/ocp.good.gif)
 
 ```java
 // Open-Close Principle - Good example
