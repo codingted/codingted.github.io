@@ -26,7 +26,7 @@ comments: true
 
 下边是一个违背开闭原则的例子.不同的形状(shape)通过继承GraphicEditor来进行画图.
 
-![ocp.bad]({{ site.img_server }}/translate/img/opc.bad.gif)
+![ocp.bad]({{ site.img_server }}/translate/img/ocp.bad.gif)
 
 显然这种设计违背了开闭原则,因为当我们需要添加新的形状时都需要修改GraphicEditor类.这种设计有以下几个缺点:
 
