@@ -21,6 +21,11 @@ comments: true
 
 ![observer_implementation_-_uml_class_diagram]({{ site.img_server }}/translate/img/observer_implementation_-_uml_class_diagram.gif)
 
+
+
+
+
+
 模型参与者
 
 > **Observable** - 定义绑定和解绑观察者的接口或抽象方法.在GOF的书中这个类/接口被成为**主题**(**Subject**)   
