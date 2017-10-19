@@ -19,6 +19,10 @@ sudo apt install update-manager-core
 sudo do-release-upgrade -d
 ```
 
+
+
+
+
 ## 安装过程
 
 刚开始想是能一步升级到17.10但是在升级的过程中只能下载到ubuntu17.04的版本，后来各种换源（刚开始使用的是阿里的源）各种尝试都不行，最后只好两部升级的（先升级到17.04在升级到17.10）。
