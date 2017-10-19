@@ -11,6 +11,8 @@ comments: true
 
 ## 命令行升级
 
+> **重要：** 备份你的数据
+
 ```shell
 sudo apt update && sudo apt autoremove && sudo apt dist-upgrade
 sudo apt install update-manager-core
