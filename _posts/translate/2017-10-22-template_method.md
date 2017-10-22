@@ -193,4 +193,4 @@ void something() {
 由于上述原因,我们应该特别注意模板方法的访问修饰符:模板方法应该在基类中被实现,而具体的业务需要在子类中实现.定制钩子方法是一个特殊的情况.
 
 
-原文地址:[http://www.oodesign.com/template-method-pattern.html]http://www.oodesign.com/template-method-pattern.html
+原文地址:[http://www.oodesign.com/template-method-pattern.html](http://www.oodesign.com/template-method-pattern.html)

@@ -114,4 +114,4 @@ sudo reboot
 * 了解自己的分区状况
 * 合理规划(慎重重装你的系统)
 
-参考链接:[https://www.howtogeek.com/116742/how-to-create-a-separate-home-partition-after-installing-ubuntu/]https://www.howtogeek.com/116742/how-to-create-a-separate-home-partition-after-installing-ubuntu/
+参考链接:[https://www.howtogeek.com/116742/how-to-create-a-separate-home-partition-after-installing-ubuntu/](https://www.howtogeek.com/116742/how-to-create-a-separate-home-partition-after-installing-ubuntu/)
