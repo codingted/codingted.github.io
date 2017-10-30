@@ -17,13 +17,17 @@ There are common situations when classes differ only in their behavior. For this
 
 ## 模式
 
-Define a family of algorithms, encapsulate each one, and make them interchangeable. Strategy lets the algorithm vary independently from clients that use it.
-
 定义一系列算法,分别封装到不同类中,并提供相同的调用接口.不同的策略可以单独进行单独调用.
 
 **继承关系**
 
 ![strategy_implementation_-_uml_class_diagram]({{ site.img_server }}/translate/img/strategy_implementation_-_uml_class_diagram.gif)
+
+
+
+
+
+
 
 Strategy - 为不同的策略算法定义一个的接口.不同的业务通过接口调用不同的算法逻辑实现类.
 
@@ -155,13 +159,6 @@ public class Main {
 
 * **策略模式参数的输入输出**
 
-Usually each strategy need data from the context have to return some processed data to the context. This can be achieved in 2 ways. 
-creating some additional classes to encapsulate the specific data.
-passing the context object itself to the strategy objects. The strategy object can set returning data directly in the context.
-When data should be passed the drawbacks of each method should be analyzed. For example, if some classes are created to encapsulate additional data, a special care should be paid to what fields are included in the classes. Maybe in the current implementation all required fields are added, but maybe in the future some new strategy concrete classes require data from context which are not include in additional classes. Another fact should be specified at this point: it's very likely that some of the strategy concrete classes will not use field passed to the in the additional classes.
-
-On the other side, if the context object is passed to the strategy then we have a tighter coupling between strategy and context.
-
 通常策略方法需要从Context中输入参数并返回处理后的结果数据.实现这种需求有两种方式:
 
 * 创建其它的类来包装需要返回的数据
@@ -173,7 +170,22 @@ On the other side, if the context object is passed to the strategy then we have 
 
 * **相关算法**
 
-The strategies can be defined as a hierarchy of classes offering the ability to extend and customize the existing algorithms from an application. At this point the composite design pattern can be used with a special care. 
-
 策略模式可以被定义为一个类的继承体系,为应用程序提供扩展不同行为的能力.在这一点上我们可能需要考虑使用组合设计模式.
 
+* **可选的策略实现**
+
+策略模式中使Context包含默认执行的算法(策略)也是可以的,在运行时由Context检查是否存在策略对象,如果不存在就就执行默认的策略,如果找到了策略对象则执行默认策略对象的策略方法代替默认方法.这种方法解决了只有需要特定的策略方法时才有必要实现策略类,否则便不需要考虑策略方法.
+
+* **策略模式和创建(creation)型模式**
+
+在传统的策略模式中客户端程序需要关注策略实现类,为了將客户端程序和策略类代码解耦我们可以在Context队形中使用工厂类来创建策略类.通过这种方法客户端只需要传递相应的参数来请求使用特定的策略算法.
+
+* **策略模式和桥接模式**
+
+两种模式有相同的UML图,但是他们之间的目的不同,策略模式侧重的是行为,而桥接模式侧重的是结构.更进一步说,Context和策略类之间要比桥接模式中的抽象类和实现类耦合的更紧密.
+
+## 总结
+
+策略模式將不同的行为分割到不同的类中.这种做法有它的有点,但是它主要的缺点是客户端必须要了解不同策略之间的差异.因为客户端不需要了解实现细节所以在客户端变化和行为相关时使用策略模式.
+
+原文地址:[http://www.oodesign.com/strategy-pattern.html](http://www.oodesign.com/strategy-pattern.html)
