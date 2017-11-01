@@ -11,8 +11,6 @@ comments: true
 
 ## 动机
 
-There are common situations when classes differ only in their behavior. For this cases is a good idea to isolate the algorithms in separate classes in order to have the ability to select different algorithms at runtime. 
-
 有些情况下类之间只是某些行为不同,这时隔离他们之间不同的算法逻辑到不同的类,这样在运行时选择不同的类(算法逻辑)就可以了.
 
 ## 模式
