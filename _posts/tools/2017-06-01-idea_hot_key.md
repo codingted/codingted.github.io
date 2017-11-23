@@ -203,3 +203,24 @@ comments: true
 |Tab|缩进 `（必备）` |
 |ESC|从工具窗口进入代码文件窗口 `（必备）` |
 |连按两次Shift|弹出 `Search Everywhere` 弹出层|
+
+## Tips
+
+### Postfix Completion
+
+比如说，你想写 
+
+```java
+for (User user:users) { ... } 
+```
+只需要输入 **users.for** 再按tab就行了
+
+你想写 
+
+```java
+Date birthday = user.getBirthday()
+```
+
+只需要输入**user.getBirthday().var** 再按tab就行了
+
+more: ** Settings → Editor → Postfix Templates**
