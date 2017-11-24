@@ -15,7 +15,7 @@ Kafka客户端发送消息到Kafka集群.
 
 producer是线程安全的在多线程下共享一个实例要比多个实例有更高的效率.
 
-**简单实例**
+## 简单实例
 
 ```
  Properties props = new Properties();
@@ -51,6 +51,7 @@ producer是线程安全的在多线程下共享一个实例要比多个实例有
 
 *key.serializer*和*value.serializer*设置key和value发送时的结构.可以使用`ByteArraySerializer` 或者`StringSerializer`来处理简单的字符串或者byte数组.(处理中文乱码)
 
+## 幂等&事务
 Kafka 0.11之后的版本额外提供了两种模式:幂等和事务生产者.幂等的生产者將至少一次加强到只有一次交付.在这种情况下生产者重试将不会引入重复.事务性生产者將允许应用自动的將消息发送到多个不同的分区(不同的主题).
 
 开启幂等性生产者需要设置*enable.idempotence*为true.设置好之后*retries*默认将会是**Integer.MAX_VALUE**.(当producer发生无限重试时,建议关闭producer,进行检查)
@@ -94,48 +95,4 @@ Properties props = new Properties();
 通过调用`producer.abortTransaction()`方法可以确保所有被成功写入的记录不被标识为终止.
 
 事务性生产者可以提交消息到0.10.0或者更高版本的broker.低版本的broker可能不支持客户端该特性.所以事务API需要broker版本为0.11.0或者更高的版本.当你调用不被broker支持的api会抛出`UnsupportedVersionException`
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
