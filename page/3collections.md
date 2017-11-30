@@ -31,9 +31,15 @@ type: page
 
         vim 导航
 
+    * [vim-nerdtree-tabs](https://github.com/jistr/vim-nerdtree-tabs)
+
+        NERDtree和Tab共享
+    * [ctrlp](https://github.com/kien/ctrlp.vim)
+        
+        文件查找支持file,buffer,mru,tag...不同类型的查找
 
 * chrome 插件
-  * AdBlock, Octotree, Postman, Postman Interceptor,switchyOmega, User_agent switcher, 有道云笔记, 有道翻译, devdocs
+  * Vimium AdBlock, Octotree, Postman, Postman Interceptor,switchyOmega, User_agent switcher, 有道云笔记, 有道翻译, devdocs
 
 * Idea
 
