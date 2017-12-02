@@ -320,6 +320,22 @@ $ git stash
 $ git stash pop
 ```
 
+## 小技巧
+
+* 配置.gitignore规则不生效
+
+在项目开发过程中需要把已经纳入版本控制的文件忽略,直接配置`.gitignore`无法生效,原因是`.gitignore`只能忽略未被纳入版本控制的文件,如果已经纳入版本控制的需要忽略则需要先把本地的缓存清除掉
+
+```
+$ git rm -r --cached .(这是清除本地所有的当然也能指定某个文件)
+$ git rm -r --cached [file]
+$ git add .
+$ git commit -m 'update gitignore'
+
+```
+
+
+
 # 参考链接
 
 [阮一峰的博客/常用Git命令](http://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html)   
