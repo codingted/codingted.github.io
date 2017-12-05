@@ -93,7 +93,7 @@ $ git commit -m [message]
 # 提交暂存区的指定文件到仓库区
 $ git commit [file1] [file2] ... -m [message]
 
-# 提交工作区自上次commit之后的变化，直接到仓库区
+# 提交工作区自上次commit之后的变化(已经在仓库中的文件)，直接到仓库区
 $ git commit -a
 
 # 提交时显示所有diff信息
