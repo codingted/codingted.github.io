@@ -318,6 +318,12 @@ $ git revert [commit]
 # 暂时将未提交的变化移除，稍后再移入
 $ git stash
 $ git stash pop
+
+# 备份当前工作区并添加备注
+$ git stash save "message"
+
+# 清空栈
+$ git stash clear
 ```
 
 ## 小技巧
