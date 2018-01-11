@@ -29,6 +29,9 @@ awk是个优秀文本处理工具，可以说是一门程序设计语言。下�
 #语法
 awk -F 'FS' 'command' inputfile
 
+多个分割符使用[]，例如：    
+awk -F '[:\t]' 'commond' inputfile
+
 或者
 
 awk 'BEGIN{FS="FS";}'
@@ -181,4 +184,29 @@ students.txt  has  5 Records
 ## FNR(File Number of Records) 
 
 当awk 读入多个文件时 NR记录的是总的记录数,如果想要记录每个文件的记录数,则使用FNR
+ 
+## awk内置变量
 
+变量名      | 含义
+------------|---------
+ARGC        | 命令行参数的数目
+ARGIND      | 命令行中当前的文件在ARGV内的索引（仅用于gawk）
+ARGV        | 命令行参数数组
+CONVFMT     | 数字转换格式，默认%.6g(仅用于gawk)
+ENVIRON     | 包含当前shell环境变量值的数组
+ERRNO       | 在使用`getline`进行读取操作或者是`close`进行系统重定向时，如果发生错误，ERRNO会包含错误描述（仅用于gawk）
+FIELDWIDTHS | `echo "aabbbcccc" | awk -v FIELDWIDTHS="2 3 4" '{for(i=1;i<=NF;i++)print $i}'`
+FILENAME    | 当前输入文件的名称
+FNR         | 当前文件记录数（与NR的区别是，当输入多个文件时会分别显示每个文件中的记录数）
+FS          | 输入字段分割符，默认空格
+IGNORECASE  | 正则表达式或字符串匹配中不区分大小写,非0值时忽略大小写（仅用与gawk）
+NF          | 当前记录的字段数
+NR          | 目前的记录数
+OFMT        | 数字的输出格式
+OFS         | 输出字段分割符
+ORS         | 输出记录分割符
+RLENGTH     | match函数匹配到的字符串的长度
+RS          | 输入记录分割符
+RSTART      | match函数匹配到的字符串的偏移量
+RT          | 
+SUBSEP      | 数组下表分割符
