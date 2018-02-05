@@ -1,0 +1,92 @@
+---
+layout: post
+title: logback配置文件示例
+categories: code
+tags: log logback
+comments: true
+---
+
+* content
+{:toc}
+
+```xml
+<configuration>
+    <!--<statusListener class="ch.qos.logback.core.status.NopStatusListener" />-->
+    <jmxConfigurator/>
+    
+    <!-- 控制台输出 -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>
+                [%d{yyyy-MM-dd HH:mm:ss.SSS}] [%-36.36thread] [%-5level] [%-36.36logger{36}:%-4.4line] - %msg%n
+            </pattern>
+        </encoder>
+    </appender>
+    <!-- 按照每天生成日志文件 -->
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${log.path}/${app.name}/sys.log</file>
+        <!--拒绝ERROR日志-->
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>ERROR</level>
+            <onMatch>DENY</onMatch>
+            <onMisMatch>NEUTRAL</onMisMatch>
+        </filter>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>${log.lowest.level}</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>${log.path}/${app.name}/sys-%d{yyyy-MM-dd}-%i.log</FileNamePattern>
+            <MaxHistory>90</MaxHistory>
+            <TimeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <MaxFileSize>10MB</MaxFileSize>
+            </TimeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>
+                [%d{yyyy-MM-dd HH:mm:ss.SSS}] [%-36.36thread] [%-5level] [%-36.36logger{36}:%-4.4line] - %msg%n
+            </pattern>
+        </encoder>
+    </appender>
+    <appender name="FILE-ERROR" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${log.path}/${app.name}/sys-err.log</file>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>ERROR</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>${log.path}/${app.name}/sys-err-%d{yyyy-MM-dd}-%i.log</FileNamePattern>
+            <MaxHistory>90</MaxHistory>
+            <TimeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <MaxFileSize>10MB</MaxFileSize>
+            </TimeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>[%d{yyyy-MM-dd HH:mm:ss.SSS}] [%-36.36thread] [%-5level] [%-36.36logger{36}:%-4.4line] - %msg%n
+            </pattern>
+        </encoder>
+    </appender>
+
+    <!-- show parameters for hibernate sql 专为 Hibernate 定制 -->
+    <logger name="org.hibernate.type.descriptor.sql.BasicBinder"    additivity="true" level="${log.hibernate.level}" />
+    <logger name="org.hibernate.type.descriptor.sql.BasicExtractor" additivity="true" level="${log.hibernate.level}" />
+    <logger name="org.hibernate.SQL"                                additivity="true" level="${log.hibernate.level}" />
+    <logger name="org.springframework"                              additivity="true" level="${log.spring.level}"/>
+    <logger name="com.myown"                                        additivity="true" level="${log.root.level}"/>
+
+    <!-- 日志输出级别 -->
+    <root level="${log.root.level}">
+        <appender-ref ref="STDOUT"/>
+        <appender-ref ref="FILE"/>
+        <appender-ref ref="FILE-ERROR"/>
+    </root>
+
+</configuration>
+```
+
+配置文件中的变量是需要在我而不应用启动前加载的,两种方式
+
+1. 设置JVM启动参数 -Dlog.hibernate.level=DEBUG -Dlog.spring.level=INFO
+2. 在tomcat的bin文件夹下新增一个(windows下一bat结尾,Unix like 为sh结尾的文件),setevn.bat/.sh的文件
