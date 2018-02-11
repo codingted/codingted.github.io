@@ -51,21 +51,6 @@ defaults:
       path: "_posts"
     values:
       layout: "blog"
-  -
-    scope:
-      path: "_effective-cpp"
-    values:
-      layout: "blog"
-  -
-    scope:
-      path: "_git-workflow"
-    values:
-      layout: "blog"
-  -
-    scope:
-      path: "_vim-practice"
-    values:
-      layout: "blog"
 
 gems:
   - jekyll-sitemap
