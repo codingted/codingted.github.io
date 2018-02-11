@@ -19,7 +19,7 @@ markdown_ext:  md
 excerpt_separator: "<!-- more -->"
 highlighter: rouge
 lsi: false
-exclude: ['README.md', '.*', 'bin/', 'Gemfile', 'node_modules', '*.log', 'package.json']
+exclude: ['README.md', '.*', '_drafts', 'bin/', 'Gemfile', 'node_modules', '*.log', 'package.json']
 kramdown:
   input: GFM
   hard_wrap: false
