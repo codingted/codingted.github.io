@@ -1,21 +1,22 @@
 ---
-layout: post
 title: awk实用程序
 category: linux
 tags: linux awk
 comments: true
 ---
 
-* content
-{:toc}
+
+## 介绍
+
+`AWK`是一种为文本处理设计的编程语言,通常用作数据处理.是`Unix-like`系统中的标准功能.[wiki](https://en.wikipedia.org/wiki/AWK)
 
 ## 基本操作
 
-```
+```shell
 # 输出包含word字符串的行
 $ awk '/word/' file
 
-# 对地一个字段里匹配到Ted或者ted的行进行显示
+# 对第一个字段里匹配到Ted或者ted的行进行显示
 $ awk '$1 ~ /[Tt]ed/' file
 
 # 显示不是以ly结尾的行
@@ -28,11 +29,7 @@ $ awk '{print $NF}' file
 $ awk '/Ted/{count++}END{print "Ted found " count " times."}' file
 ```
 
-
-
-
-
-
+<!-- more -->
 
 ## 比较运算
 
@@ -42,12 +39,12 @@ awk所有的运算都是浮点运算
 
 运算符  | 含义  |例子
 --------|-------|-----
-<       |   |
-<=      |   |
-==      |   |
-!=      |   |
->       |   |
->=      |   |
+<       | 小于  |
+<=      | 小于等于|
+==      | 等于  |
+!=      | 不等于|
+>       | 大于  |
+>=      | 大于等于|
 ~       | 正则匹配| ~/word/
 !~      | 正则不匹配| !~/word/
 
@@ -82,7 +79,7 @@ BEGIN模式后跟的操作块，awk会在处理输入文件之前先执行该操
 
 #### END模式
 
-END模式不匹配人恶化输入行，而是执行任何与之关联的的操作。awk处理玩所有的输入行才处理END模式
+END模式不匹配任何输入行，而是执行任何与之关联的的操作。awk处理玩所有的输入行才处理END模式
 ## POSIX字符类
 
 括号类      | 含义

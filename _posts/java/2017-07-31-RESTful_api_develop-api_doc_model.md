@@ -1,14 +1,9 @@
 ---
-layout: post
 title:  "接口开发从前到后-文档模板"
 categories: java
 tags: markdown
 comments: true
 ---
-
-* content
-{:toc}
-
 
 # 文档更新记录
 

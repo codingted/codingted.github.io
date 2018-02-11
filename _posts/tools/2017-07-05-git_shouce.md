@@ -1,12 +1,8 @@
 ---
-layout: post
 title: Git速查手册
 category: tools
 tags: Git
 ---
-
-* content
-{:toc}
 
 # git 速查手册
 
@@ -23,12 +19,12 @@ $ git init
 ```
 ### 从现有仓库克隆clone
 
-```
+```shell
 $ git clone git@github.com:codingted/codingted.github.io.git
 ```
 ## Git配置
 
-```
+```shell
 $ git config  user.name "xx"
 $ git config  user.email "xx@gmail.com"
 # 修改配置
@@ -39,7 +35,7 @@ $ vi .git/config
 
 ## Git 关联远程仓库
 
-```
+```shell
 $ git remote add [shortname] [url]
 
 # 显示所有远程仓库
@@ -53,15 +49,15 @@ $ git remote rm [shortname]
 ```
 > 本地仓库关联多个远程仓库，在提交时需要指定远程仓库   
 > 另外当本地有多个git仓库需要管理多个ssk-key,见本文：
-> [多Github账户SSH-Key配置](http://www.codingted.com/2017/06/21/Multi_ssh-key_Git/)
+> [多Github账户SSH-Key配置]({{ site.url }}/2017/06/21/Multi_ssh-key_Git/)
 
 ## git本地仓库图示
 
-![本地仓库图示]({{ site.img_server }}/tools/img/git-basic-usage.svg)
+![本地仓库图示]({{ site.img_server }}/tools/git-basic-usage.svg)
 
 ## 增加/删除
 
-```
+```shell
 # 添加指定文件到暂存区
 $ git add [file1] [file2] ...
 
@@ -86,7 +82,7 @@ $ git mv [file-original] [file-renamed]
 ```
 ## 代码提交
 
-```
+```shell
 # 提交暂存区到仓库区
 $ git commit -m [message]
 
@@ -109,7 +105,7 @@ $ git commit --amend [file1] [file2] ...
 
 ## 查看提交历史
 
-```
+```shell
 $ git log
 
 # 展开每次的内容差异并指定最近的x次提交的历史
@@ -175,7 +171,7 @@ $ git reflog
 |%cr  | 提交日期，按多久以前的方式显示 |
 |%s   | 提交说明  |
 
-```
+```shell
 # 单行显示
 $ git log --pretty=oneline
 
@@ -190,7 +186,7 @@ git log --author="codingted" --pretty=format:"%cd : %s"
 ```
 ## 分支
 
-```
+```shell
 # 列出所有本地分支
 $ git branch
 
@@ -237,7 +233,7 @@ $ git branch -dr [remote/branch]
 
 ## 标签
 
-```
+```shell
 # 列出所有tag
 $ git tag
 
@@ -271,7 +267,7 @@ $ git checkout -b [branch] [tag]
 
 ## 远程拉取提交
 
-```
+```shell
 # 取回远程仓库的变化，并与本地分支合并
 $ git pull [remote] [branch]
 
@@ -286,7 +282,7 @@ $ git push [remote] --all
 ```
 ## 撤销/回滚
 
-```
+```shell
 # 恢复暂存区的指定文件到工作区
 $ git checkout [file]
 
@@ -322,6 +318,9 @@ $ git stash pop
 # 备份当前工作区并添加备注
 $ git stash save "message"
 
+# 使用栈中哪一个信息
+$ git stash apply 
+
 # 清空栈
 $ git stash clear
 ```
@@ -332,7 +331,7 @@ $ git stash clear
 
 在项目开发过程中需要把已经纳入版本控制的文件忽略,直接配置`.gitignore`无法生效,原因是`.gitignore`只能忽略未被纳入版本控制的文件,如果已经纳入版本控制的需要忽略则需要先把本地的缓存清除掉
 
-```
+```shell
 $ git rm -r --cached .(这是清除本地所有的当然也能指定某个文件)
 $ git rm -r --cached [file]
 $ git add .

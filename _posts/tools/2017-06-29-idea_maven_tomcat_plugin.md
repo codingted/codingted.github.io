@@ -1,13 +1,9 @@
 ---
-layout: post
 title: IDEA配置maven tomcat插件Debug/热部署
 categories: tools
 tags: idea
 comments: true
 ---
-
-* content
-{:toc}
 
 # 配置maven tomcat插件
 
@@ -26,9 +22,12 @@ comments: true
 </plugin>
 ```
 
+<!-- more -->
+
+
 现在只需要运行就可以运行项目了
 
-```
+```shell
 mvn clean tomcat7:run
 ```
 > 但是这仅仅是运行项目，在这种情况下不能debug也没有热部署的功能，每次必须进行关闭 **mvn tomcat7:shutdown**
@@ -37,11 +36,11 @@ mvn clean tomcat7:run
 
 * 添加maven的Run/Debug项（Run->Edit Config）
 
-![选择maven]({{ site.img_server }}/tools/img/idea_debug.jpg)
+![选择maven]({{ site.img_server }}/tools/idea_debug.jpg)
 
 * 填写相应的命令
 
-![填写运行命令]({{ site.img_server }}/tools/img/idea_debug_2.jpg)
+![填写运行命令]({{ site.img_server }}/tools/idea_debug_2.jpg)
 
 > 这样只要进行debug启动就可以调试了但是，改完以后idea是不会自动部署的。
 

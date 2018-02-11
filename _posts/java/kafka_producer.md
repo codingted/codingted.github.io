@@ -1,18 +1,13 @@
 ---
-layout: post
 title:  "Kafka producer"
 categories: java
 tags: kafka
 comments: true
 ---
 
-* content
-{:toc}
-
-
 ## KafkaProducer
 
-```
+```java
 org.apache.kafka.clients.producer
 Class KafkaProducer<K,V>
 
@@ -27,13 +22,11 @@ Kafka客户端发送消息到Kafka集群.
 
 producer是线程安全的在多线程下共享一个实例要比多个实例有更高的效率.
 
-
-
-
+<!-- more -->
 
 ## 简单实例
 
-```
+```java
  Properties props = new Properties();
  props.put("bootstrap.servers", "localhost:9092");
  props.put("acks", "all");
@@ -80,7 +73,7 @@ Kafka 0.11之后的版本额外提供了两种模式:幂等和事务生产者.�
 
 **例子**
 
-```
+```java
 Properties props = new Properties();
  props.put("bootstrap.servers", "localhost:9092");
  props.put("transactional.id", "my-transactional-id");

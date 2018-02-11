@@ -1,13 +1,9 @@
 ---
-layout: post
 title:  "java volatile 关键字"
 categories: java
 tags: core_java
 comments: true
 ---
-
-* content
-{:toc}
 
 # volatile关键字两种特性
 
@@ -15,7 +11,7 @@ comments: true
 2. 禁止指令重排序优化,普通的变量仅仅保证在该方法的执行过程中所有依赖 赋值结果的地方都能获取正确的结果,而不能保证变量赋值操作的顺序与程
 序代码的执行顺序一致。举个简单的例子说明下指令重排序优化问题:
 
-```
+```java
 public class Singleton {
     private static Singleton instance; //避免指令重排声明成 volatile
     private Singleton (){}
@@ -34,6 +30,8 @@ public class Singleton {
 }
 ```
 
+<!-- more -->
+
 > new 创建对象的过程：
 >>1. 给 singleton 分配内存  
 >>2. 调用 Singleton 的构造函数来初始化成员变量，形成实例   
@@ -43,7 +41,7 @@ public class Singleton {
 
 # 内存中变量的操作
 
-![内存模型]({{ site.img_server }}/java/img/java_volatile.jpg)
+![内存模型]({{ site.img_server }}/java/java_volatile.jpg)
 
 JAVA 内存模型定义了八种操作来完成主内存和工作内存的变量访问,具体
 如下:

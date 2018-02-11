@@ -1,13 +1,9 @@
 ---
-layout: post
 title:  "ThreadLocal分析整理"
 categories: java
 tags: core_java
 comments: true
 ---
-
-* content
-{:toc}
 
 # 使用场景
 ThreadLocal是为每个线程保存了单独的变量副本,在线程内可以安全的访问.
@@ -32,11 +28,7 @@ public class Foo
     }
 }
 ```
-
-
-
-
-
+<!-- more -->
 
 # 源码分析
 
@@ -75,7 +67,7 @@ public void set(T value) {
         createMap(t, value);
 }
 ```
-![threadLocalMap]({{ site.img_server }}/java/img/threadLocal.jpg)
+![threadLocalMap]({{ site.img_server }}/java/threadLocal.jpg)
 
 ## get
 
@@ -206,7 +198,7 @@ static class ThreadLocalMap {
 
 key是对ThreadLocal的一个弱引用,所以在ThreadLocal没有强引用指向它时,在系统执行GC时是不会组织对ThreadLocal的回收,此时key为null,无法对value进行访问了
 
-![弱引用]({{ site.img_server }}/java/img/threadLocal_weekref.jpg)
+![弱引用]({{ site.img_server }}/java/threadLocal_weekref.jpg)
 
 ### set
 

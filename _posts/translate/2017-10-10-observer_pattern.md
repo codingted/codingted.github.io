@@ -1,13 +1,9 @@
 ---
-layout: post
 title:  "观察者模式"
 categories: translate
 tags: 设计模式
 comments: true
 ---
-
-* content
-{:toc}
 
 ## 动机
 
@@ -19,11 +15,10 @@ comments: true
 
 在对象之间建立一对多的依赖关系,当被依赖的对象发生变化时,所有依赖对象將收到通知并自动更新自身的状态.
 
-![observer_implementation_-_uml_class_diagram]({{ site.img_server }}/translate/img/observer_implementation_-_uml_class_diagram.gif)
+![observer_implementation_-_uml_class_diagram]({{ site.img_server }}/translate/observer_implementation_-_uml_class_diagram.gif)
 
 
-
-
+<!-- more -->
 
 
 模型参与者
@@ -48,7 +43,7 @@ comments: true
 
 新闻代理收集新闻并且將收集的新闻发布给不同的订阅者.我们需要为新闻代理商和订阅者创建合理的架构保证新闻可以及时通知到订阅者.订阅者通常是:Emails,SMS,...,我们的架构需要保证扩展的灵活性,可以支持不同的新闻类型和不同的订阅者.
 
-![observer_example_newspublisher_-_uml_class_diagram]({{ site.img_server }}/translate/img/observer_example_newspublisher_-_uml_class_diagram.gif)
+![observer_example_newspublisher_-_uml_class_diagram]({{ site.img_server }}/translate/observer_example_newspublisher_-_uml_class_diagram.gif)
 
 NewsPublisher是被观察者(主题),因为需要被扩展为不同类型的主题对象所以NewsPublisher被声明为抽象类.现在只有一个实现类BussinessNewsPublisher后续可能还有SportsNewsPublisher,PoliticalNewsPublisher... .
 
@@ -92,23 +87,4 @@ NewsPublisher是被观察者(主题),因为需要被扩展为不同类型的主�
 * **工厂模式** - 通常使用工厂模式去创建观察者这样就可以在添加新的观察者类时,可以通过修改配置文件就可以完成.
 * **模板模式** - 观察者模式和模板模式结合使用可以保证在通知之前主题自身的状态一致.
 * **中介者模式** - 中介者模式可以使用在主题和观察者存在多对多的情况下,管理他们之间复杂的逻辑关系.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

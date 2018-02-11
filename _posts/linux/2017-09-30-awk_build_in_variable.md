@@ -1,19 +1,14 @@
 ---
-layout: post
 title:  "AWK内建变量FS,OFS,RS,ORS,NR,NF,FNR"
 categories: linux
 tags: linux awk
 comments: true
 ---
 
-* content
-{:toc}
-
 awk是个优秀文本处理工具，可以说是一门程序设计语言。下面是awk内置变量。
 
 
-
-
+<!-- more -->
 
 
 ## FS(input Filed Seprator)
@@ -25,7 +20,7 @@ awk是个优秀文本处理工具，可以说是一门程序设计语言。下�
 * 使用-F参数
 * 定义FS变量
 
-```
+```shell
 #语法
 awk -F 'FS' 'command' inputfile
 
@@ -38,8 +33,7 @@ awk 'BEGIN{FS="FS";}'
 ```
 
 
-
-```
+```shell
 $ cat etc_passwd.awk
 
 BEGIN{
@@ -57,7 +51,7 @@ END{
 
 输出结果
 
-```
+```shell
 % awk -f etc_passwd.awk /etc/passwd 
 Name	UserId	GroupId	HomeDir
 root	x	0	/root
@@ -73,7 +67,7 @@ sync	x	4	/bin
 
 设置输出内容之间的分割符
 
-```
+```shell
 $ awk -F ':' '{print $1,$2}' /etc/passwd
 
 root x
@@ -83,7 +77,7 @@ bin x
 
 默认的$1和$2之间的分割符是空白符,如果想使用其它的分割符需要进行定义
 
-```
+```shell
 $ awk -F ':' 'BEGIN{OFS="->";}{print $1,$2;}' /etc/passwd
 root->x
 daemon->x
@@ -94,7 +88,7 @@ bin->x
 
 默认的每一个回车换行是一条记录,如果我们需要查看的记录为这种格式:
 
-```
+```shell
 $cat student.txt
 Jones
 2143
@@ -129,7 +123,7 @@ Dayan
 
 下边的awk脚本將按照每个学生为一条记录进行解析,当然需要告诉awk每一条记录的分割符
 
-```
+```shell
 $ awk 'BEGIN{RS="\n\n"; FS="\n";} {print $1,$2;}' student.txt
 
 Jones 2143
@@ -141,7 +135,7 @@ Dayan 2415
 
 ## ORS(Out Record Seperator)
 
-```
+```shell
 $ awk 'BEGIN{ORS="->";} {print $1,$2}' student.txt
 
 Jones 2143->Gondrl 2321->RinRao 2122->Edwin 2537->Dayan 2415
@@ -152,7 +146,7 @@ Jones 2143->Gondrl 2321->RinRao 2122->Edwin 2537->Dayan 2415
 
 记录处理记录的总数量
 
-```
+```shell
 $ awk 'BEGIN{RS="\n\n";FS="\n"} {print $1,$2, "\tNo ", NR} END {print NR, "student processed"}' students.txt
 
 Jones 2143 	    No  1
@@ -166,7 +160,7 @@ Dayan 2415 	    No  5
 
 每条记录分割完成后的字段数量
 
-```
+```shell
 % awk 'BEGIN{RS="\n\n";FS="\n"} {print $1, "\tfields->", NF}' students.txt   
 Jones 	fields-> 5
 Gondrol 	fields-> 5
@@ -176,7 +170,7 @@ Dayan 	fields-> 5
 ```
 ## FILENAME
 
-```
+```shell
 % awk 'BEGIN{RS="\n\n";FS="\n"} END{print FILENAME, " has ", NR, "Records"}' students.txt  
 students.txt  has  5 Records
 ```

@@ -1,13 +1,9 @@
 ---
-layout: post
 title:  "模板方法"
 categories: translate
 tags: 设计模式
 comments: true
 ---
-
-* content
-{:toc}
 
 ## 动机
 
@@ -18,12 +14,10 @@ comments: true
 > * 定义操作的框架,具体的实现由子类来完成.
 > * 模板方法允许子类重写其中某些步骤的具体操作过程,但是有模板类定义的整体过程是不允许进行修改的.
 
-![template_method_implementation_-_uml_class_diagram.gif]({{ site.img_server }}/translate/img/template_method_implementation_-_uml_class_diagram.gif)
+![template_method_implementation_-_uml_class_diagram.gif]({{ site.img_server }}/translate/template_method_implementation_-_uml_class_diagram.gif)
 
 
-
-
-
+<!-- more -->
 
 
 ## 实现
@@ -43,7 +37,7 @@ ConcreteClass - 实现定义在模板类中的具体的方法,完成实体类所
 
 例子- 旅游代理
 
-![template_method_example_trips_-_uml_class_diagram.gif]({{ site.img_server }}/translate/img/template_method_implementation_-_uml_class_diagram.gif)
+![template_method_example_trips_-_uml_class_diagram.gif]({{ site.img_server }}/translate/template_method_implementation_-_uml_class_diagram.gif)
 
 假设我们要为旅游代理商开发一套应用程序.旅游代理商需要管理每一个旅行.所有的旅行都包含一些相同的行为部分.但是提供了不同的服务套餐.例如每个旅行都包含以下的基本的步骤:
 

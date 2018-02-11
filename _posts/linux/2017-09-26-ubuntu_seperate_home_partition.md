@@ -1,20 +1,15 @@
 ---
-layout: post
 title:  "ubuntu扩容(重新划分/home分区)"
 categories: linux
 tags: linux 分区
 comments: true
 ---
 
-* content
-{:toc}
-
-
 # 背景
 
 windows+ubuntu双系统(平时是在ubuntu下使用的,windows作为备份),因为前期装系统没有合理规划分区,导致现在Ubuntu系统的可用容量仅剩下85%(总共59G,剩余6G),而且ubuntu只有一个/分区和swap分区.
 
-![系统分区现状]({{ site.img_server }}/linux/img/sys_origin.jpg)
+![系统分区现状]({{ site.img_server }}/linux/sys_origin.jpg)
 
 # 解决方案
 
@@ -27,18 +22,15 @@ windows+ubuntu双系统(平时是在ubuntu下使用的,windows作为备份),因�
 * 重新分区,扩展容量
     小幅度的调整系统中的存储空间的分配(本文就选择的这种方法)
 
-
-
-
-
-
+    
+<!-- more -->
 
 
 # 扩展分区
 
 ## 目标分区
 
-![分区目标]({{ site.img_server }}/linux/img/sys_target.jpg)
+![分区目标]({{ site.img_server }}/linux/sys_target.jpg)
 
 * 將原windows的D:分区变为ubuntu的/home分区;
 * 將原windows的C:盘分出250G的空间作为ubuntu的/home分区的备份分区
@@ -56,17 +48,17 @@ windows+ubuntu双系统(平时是在ubuntu下使用的,windows作为备份),因�
 
 * 安装GParted软件
 
-```
+```shell
 #apt install gparted
 ```
 
 * 重新格式化
 
-![格式化分区]({{ site.img_server }}/linux/img/resize.jpg)
+![格式化分区]({{ site.img_server }}/linux/resize.jpg)
 
 * 拷贝home目录到新的分区
 
-```
+```shell
 #挂载分区
 mount /dev/sdb1 /mnt/home_new
 
@@ -76,13 +68,13 @@ sudo cp -Rp /home/* /mnt/home_new
 
 * 修改/etc/fstab
 
-```
+```shell
 # 查看新挂载的分区的UUID
 sudo blkid
 ```
-![查看block的UUID]({{ site.img_server }}/linux/img/blkid.jpg)
+![查看block的UUID]({{ site.img_server }}/linux/blkid.jpg)
 
-```
+```shell
 #备份原fstab
 sudo cp /etc/fstab /etc/fstab.backup
 
@@ -95,7 +87,7 @@ UUID=(your block UUID)     /home     ext4     nodev,nosuid     0     2
 
 * 移除home目录
 
-```
+```shell
 #挂载备份分区
 mount /dev/sda4 /mnt/home_backup
 #备份
@@ -104,7 +96,7 @@ cd / && sudo mv /home /home_backup && sudo mkdir /home
 
 * 重新启动
 
-```
+```shell
 sudo reboot
 ```
 

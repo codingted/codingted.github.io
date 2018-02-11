@@ -1,13 +1,9 @@
 ---
-layout: post
 title:  "接口开发从前到后-后端开发"
 categories: java
 tags: API 接口
 comments: true
 ---
-
-* content
-{:toc}
 
 # 后端开发工具包
 
@@ -16,7 +12,7 @@ comments: true
 
 # 后端controller
 
-```
+```java
 package com.motie.wings.web.ajax;
 
 import com.motie.wings.pojo.writing.Book;
@@ -75,10 +71,7 @@ public class BookController {
 
 ```
 
-
-
-
-
+<!-- more -->
 
 > @Controller : 注解该类是用来处理HTTP请求的    
 > @RequestMapping : 注解使用的HTTP方法（GET/POST/PUT/DELETE),HTTP的header,URIs  
@@ -93,7 +86,7 @@ public class BookController {
 
 converter                   | 说明
 ----------------------------|------------
-StringhttpMessageConverter  | 支持的媒体类型text/* 以Content-Type=text/plain格式输出
+StringhttpMessageConverter  | 支持的媒体类型text/\* 以Content-Type=text/plain格式输出
 FormHttpMessageConverter    | 支持application/x-www-form-urlencoded类型的输入，输出为MultiValueMapl\<String,String>
 MappingJacksonHttpMessageConverter | 支持JSON数据使用Jackson's ObjectMapper, 转换媒体类型为application/json类型的数据
 MarshallingHttpMessageConverter    | 支持application/xml数据类型的序列化和反序列化

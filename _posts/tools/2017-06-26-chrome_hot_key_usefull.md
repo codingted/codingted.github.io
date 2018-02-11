@@ -1,13 +1,9 @@
 ---
-layout: post
 title: chrome常用快捷键(linux)
 categories: tools
 tags: chrome
 comments: true
 ---
-
-* content
-{:toc}
 
 # chrome 常用快捷键（linux)
 

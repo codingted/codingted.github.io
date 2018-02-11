@@ -1,13 +1,9 @@
 ---
-layout: post
 title: Nodejs 更新
 categories: js
 tags: nodejs
 comments: true
 ---
-
-* content
-{:toc}
 
 # 升级nodejs
 

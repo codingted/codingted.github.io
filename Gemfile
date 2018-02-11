@@ -1,5 +1,5 @@
-source "https://rubygems.org"
-ruby '~> 2.3.0'
-gem "jekyll", "~>3.5.2"
-gem "jekyll-paginate"
-gem "jemoji"
+source 'https://rubygems.org'
+gem 'github-pages'
+gem 'jekyll-feed'
+gem 'jekyll-seo-tag'
+gem 'jekyll-redirect-from'

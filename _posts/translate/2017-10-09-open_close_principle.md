@@ -1,13 +1,9 @@
 ---
-layout: post
 title:  "开闭原则"
 categories: translate
 tags: 设计模式 设计原则
 comments: true
 ---
-
-* content
-{:toc}
 
 ## 动机
 
@@ -18,7 +14,7 @@ comments: true
 > 总得来说是:软件中的实体(类,模块,方法)应该是 **对扩展开放对修改关闭**
 
 
-
+<!-- more -->
 
 
 ## 例子
@@ -26,7 +22,7 @@ comments: true
 
 下边是一个违背开闭原则的例子.不同的形状(shape)通过继承GraphicEditor来进行画图.
 
-![ocp.bad]({{ site.img_server }}/translate/img/ocp.bad.gif)
+![ocp.bad]({{ site.img_server }}/translate/ocp.bad.gif)
 
 显然这种设计违背了开闭原则,因为当我们需要添加新的形状时都需要修改GraphicEditor类.这种设计有以下几个缺点:
 
@@ -75,7 +71,7 @@ comments: true
 * 不需要去了解GraphicEditor类内部的逻辑.
 * 因为绘图方法移到了具体的类中,降低了因为修改对其它方法造成的风险.
 
-![ocp.good]({{ site.img_server }}/translate/img/ocp.good.gif)
+![ocp.good]({{ site.img_server }}/translate/ocp.good.gif)
 
 ```java
 // Open-Close Principle - Good example

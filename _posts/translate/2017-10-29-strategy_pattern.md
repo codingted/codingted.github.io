@@ -1,13 +1,9 @@
 ---
-layout: post
 title:  "策略模式"
 categories: translate
 tags: 设计模式
 comments: true
 ---
-
-* content
-{:toc}
 
 ## 动机
 
@@ -19,13 +15,9 @@ comments: true
 
 **继承关系**
 
-![strategy_implementation_-_uml_class_diagram]({{ site.img_server }}/translate/img/strategy_implementation_-_uml_class_diagram.gif)
+![strategy_implementation_-_uml_class_diagram]({{ site.img_server }}/translate/strategy_implementation_-_uml_class_diagram.gif)
 
-
-
-
-
-
+<!-- more -->
 
 Strategy - 为不同的策略算法定义一个的接口.不同的业务通过接口调用不同的算法逻辑实现类.
 
@@ -39,7 +31,7 @@ Context对象接收客户端的请求并且作为客户端的代理对象调用�
 
 **机器人实例**
 
-![strategy_example_robot_-_uml_class_diagram]({{ site.img_server  }}/translate/img/strategy_example_robot_-_uml_class_diagram.gif)
+![strategy_example_robot_-_uml_class_diagram]({{ site.img_server  }}/translate/strategy_example_robot_-_uml_class_diagram.gif)
 
 这个实例是模仿机器人交互的例子程序.开始先创建一个模拟机器人交互的竞技场.包括以下类:
 

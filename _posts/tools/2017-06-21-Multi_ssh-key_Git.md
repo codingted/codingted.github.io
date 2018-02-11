@@ -1,28 +1,24 @@
 ---
-layout: post
 title: 多Github账户SSH-Key配置
 category: tools
 tags: ssh-key Github
 comments: true
 ---
 
-* content
-{:toc}
-
 ## 创建public key
 
-```
+```shell
 $ ssh-keygen -t rsa -C "your_email@youremail.com"
 ```
 例如，你创建了两个key
 
-```
+```shell
 ~/.ssh/id_rsa_codingted
 ~/.ssh/id_rsa_ted12214
 ```
 然后添加两个key
 
-```
+```shell
 $ ssh-add ~/.ssh/id_rsa_codingted
 $ ssh-add ~/.ssh/id_rsa_ted12214
 ```
@@ -31,13 +27,13 @@ $ ssh-add ~/.ssh/id_rsa_ted12214
 
 最后你可以检查已经保存的key
 
-```
+```shell
 $ ssh-add -l
 ```
 
 ## 修改ssh config
 
-```
+```shell
 $ vi ~/.ssh/config
 添加如下内容
 
@@ -58,12 +54,12 @@ Host ted12214.github.com
 * 克隆项目
 > 注意克隆项目的地址,与上边定义的Host 相同
 
-```
+```shell
 git clone git@codingted.github.com:codingted/xxx.git
 ```
 > 如果先前已经克隆了项目,先在需要重新关联项目
 
-```
+```shell
 git remote rm origin
 ## ssh
 git remote add origin git@codingted.github.com:codingted/xxx.git
@@ -74,7 +70,7 @@ git remote add origin https://codingted.github.com:codingted/xxx.git
 
 * 进入仓库目录修改配置
 
-```
+```shell
 // 设置github用户名
 $ git config user.name "codingted"
 $ git config user.email "coder.tedzhao@gmail.com"

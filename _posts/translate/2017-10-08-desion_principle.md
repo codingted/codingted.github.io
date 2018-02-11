@@ -1,14 +1,9 @@
 ---
-layout: post
 title:  "面向对象设计原则"
 categories: translate
 tags: 设计模式
 comments: true
 ---
-
-* content
-{:toc}
-
 
 # 设计原则
 -----------
@@ -22,9 +17,7 @@ comments: true
 * 固定(Immobility) - 只能服务于当前系统,不能被其它系统很好的复用.
 
 
-
-
-
+<!-- more -->
 
 
 ### 开闭原则(Open Close Principle)

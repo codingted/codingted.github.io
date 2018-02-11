@@ -1,13 +1,9 @@
 ---
-layout: post
 title: Ubuntu16.04升级到17.10
 category: linux
 tags: ubuntu
 comments: true
 ---
-
-* content
-{:toc}
 
 ## 命令行升级
 
@@ -18,10 +14,7 @@ sudo apt update && sudo apt autoremove && sudo apt dist-upgrade
 sudo apt install update-manager-core
 sudo do-release-upgrade -d
 ```
-
-
-
-
+<!-- more -->
 
 ## 安装过程
 

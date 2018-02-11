@@ -1,13 +1,9 @@
 ---
-layout: post
 title: 回车和换行
 category: linux
 tags: computer
 comments: true
 ---
-
-* content
-{:toc}
 
 # 回车换行符的历史背景
 

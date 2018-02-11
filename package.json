@@ -1,0 +1,25 @@
+{
+  "name": "harttle.land",
+  "version": "1.0.0",
+  "description": "source code for http://harttle.land",
+  "devDependencies": {
+    "eslint": "^4.2.0",
+    "eslint-config-es5": "^0.5.0"
+  },
+  "scripts": {
+    "lint": "eslint assets/js",
+    "start": "bundle exec jekyll serve -w --drafts --host 0.0.0.0 --incremental",
+    "build": "bundle exec jekyll build --incremental",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harttle/harttle.github.io.git"
+  },
+  "author": "harttle <harttle@harttle.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/harttle/harttle.github.io/issues"
+  },
+  "homepage": "https://github.com/harttle/harttle.github.io#readme"
+}

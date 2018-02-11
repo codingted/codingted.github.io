@@ -1,13 +1,15 @@
 ---
-layout: post
 title:  mysql时间函数
 categories: db mysql
 tags: mysql 数据库函数
 comments: true
 ---
 
-* content
-{:toc}
+# 概要
+
+mysql常用的时间操作,mark一下
+
+<!-- more -->
 
 # MySQL 获得当前日期时间(date+time) 函数
 

@@ -1,13 +1,15 @@
 ---
-layout: post
 title:  "vim配置文件"
 categories: tools
 tags: vim
 comments: true
 ---
 
-* content
-{:toc}
+vim 配置备份,现在已经开始备份dotfile了,参考[dotfile](http://dotfiles.github.io/).
+
+
+<!-- more -->
+
 
 # vim 配置文件备份 
 

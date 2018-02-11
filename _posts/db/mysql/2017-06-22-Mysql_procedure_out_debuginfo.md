@@ -1,13 +1,9 @@
 ---
-layout: post
 title:  Mysql存储过程打印调试信息
 categories: db mysql
 tags:  mysql
 comments: true
 ---
-
-* content
-{:toc}
 
 ```SQL
 

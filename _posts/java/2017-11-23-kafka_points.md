@@ -1,13 +1,9 @@
 ---
-layout: post
 title:  "Kafka应用应该知道的"
 categories: java
 tags: kafka
 comments: true
 ---
-
-* content
-{:toc}
 
 ## 概念
 
@@ -29,15 +25,11 @@ topic为一类消息，可以被分为多个partition，在物理侧面每个par
 > \# partition 的设置参数在$KAFKA_HOME/config/server.properties     
 > num.partition=3
 
-![消息写入]({{ site.img_server }}/java/img/write_to_partition.png)
+![消息写入]({{ site.img_server }}/java/write_to_partition.png)
 
 发送一条消息时,可以指定消息的key,producer会根据这个key和partition机制来判断这个消息发送给哪个partition,partition机制可以通过指定**producer**的*partition.class*这一参数来指定,该class必须实现kafka.producer.Partition接口.
 
-
-
-
-
-
+<!-- more -->
 
 ## 高可靠性存储
 
@@ -67,7 +59,7 @@ drwxr-xr-x  2 zl   zl    4096 11月 21 16:24 TTT-3/
 *在Kafka文件存储中同一个topic下有多个不同的partition,每个partition一个目录,partition的规则为:topic名称+有序序号,第一个序号从0开始,最大的序号为partition数量减1*
 
 
-![log]({{ site.img_server }}/java/img/setment_index_log.png)
+![log]({{ site.img_server }}/java/setment_index_log.png)
 
 为了防止partition无限制的扩大,每个partition中还会生成多个段(segment),segment文件由两部分组成，分别为“.index”文件和“.log”文件，分别表示为segment索引文件和数据文件。这两个文件的命令规则为：partition全局的第一个segment从0开始，后续每个segment文件名为上一个segment文件最后一条消息的offset值，数值大小为64位，20位数字字符长度，没有数字用0填充，如下：
 
@@ -90,7 +82,7 @@ drwxr-xr-x  2 zl   zl    4096 11月 21 16:24 TTT-3/
 
 Kafka通过多副本机制实现故障转移,当Kafka集群中一个broker失效时仍然保证服务可用.在Kafka中发生复制时确保partition的日志能有序的写到其它节点(副本节点)上,N个replicas,其中一个为**leader**,其它的为**follower**,leader 处理partition的所欲的读写请求,同事follow二会被动定期地去复制leader上的数据.
 
-![]({{ site.img_server }}/java/img/partion_points.png)
+![]({{ site.img_server }}/java/partion_points.png)
 
 **ISR**
 
@@ -120,7 +112,7 @@ kafka的ISR管理最终会反馈到Zookeeper节点上.
 * Controller来维护：Kafka集群中的其中一个Broker会被选举为Controller，主要负责Partition管理和副本状态管理，也会执行类似于重分配partition之类的管理任务。在符合某些特定条件下，Controller下的LeaderSelector会选举新的leader，ISR和新的leader_epoch及controller_epoch写入Zookeeper的相关节点中。同时发起LeaderAndIsrRequest通知所有的replicas。
 * leader来维护：leader有单独的线程定期检测ISR中follower是否脱离ISR, 如果发现ISR变化，则会将新的ISR的信息返回到Zookeeper的相关节点中。
 
-![数据同步]({{ site.img_server }}/java/img/leader_follower_syn.png)
+![数据同步]({{ site.img_server }}/java/leader_follower_syn.png)
 
 ### 数据可靠性和持久性保证
 

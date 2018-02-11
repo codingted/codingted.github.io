@@ -1,5 +1,4 @@
 ---
-layout: post
 title: env环境变量
 category: linux
 tags: env

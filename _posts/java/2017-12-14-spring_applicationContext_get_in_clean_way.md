@@ -1,14 +1,9 @@
 ---
-layout: post
 title:  "获取ApplicationContext"
 categories: java
 tags: spring code
 comments: true
 ---
-
-* content
-{:toc}
-
 
 ```java
 public class ApplicationContextProvider implements ApplicationContextAware {
@@ -38,8 +33,7 @@ public class ApplicationContextProvider implements ApplicationContextAware {
 MyBean c = ApplicationContextProvider.getApplicationContext.getBean("BeanId", MyBean.class);
 ```
 
-
-
+<!-- more -->
 
 **另外一种注解实现的方式**
 

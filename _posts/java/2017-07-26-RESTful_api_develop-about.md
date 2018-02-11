@@ -1,13 +1,9 @@
 ---
-layout: post
 title:  "接口开发从前到后-概览"
 categories: java
 tags: core_java
 comments: true
 ---
-
-* content
-{:toc}
 
 # 前言
 现在的开发都已经是前后端分离了，在这种情况下前后端交互的接口的设计和开发就显得尤为重要，如何更高效的在团队中间实施呢，这个还是需要一个规范的流程的.

@@ -1,13 +1,9 @@
 ---
-layout: post
 title: Ajax form表单提交
 categories: js
 tags: ajax
 comments: true
 ---
-
-* content
-{:toc}
 
 # 原生FormData对象使用
 
@@ -21,6 +17,9 @@ var request = new XMLHttpRequest();
 request.open("POST", "submitform.php");
 request.send(new FormData(formElement));
 ```
+
+<!-- more -->
+
 * 创建FormData对象
 
 ```js

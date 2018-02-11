@@ -1,4 +1,17 @@
+---
+title: Linux 任务记录工具--Taskwarrior
+categories: tools
+tags: Linux TODO 
+comments: true
+---
+
 ## 介绍
+
+linux 下的记录任务的工具,可以进行查询,打标签,设置优先级,...多种条件过滤.
+
+
+<!-- more -->
+
 
 ## 命令格式
 
@@ -23,6 +36,8 @@ Are you happy now?"
 
 $ task project: list
 ```
+
+<!-- more -->
 
 ### Project
 ```shell

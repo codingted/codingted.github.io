@@ -1,26 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html class="module-default {%if page.fullSize %}full-size{%endif%}">
+  <head> {% include head.html %} </head>
+  <body id="body" >
 
-  {% include head.html %}
+    <div class="banner {% if page.bannerTransparent %}transparent{% endif %}">
+      <div class="container-fluid">
+        <nav class="pull-right">
+          <a class="glow no-decoration" href="/tags.html">标签</a>
+          <a class="glow no-decoration" href="/archive.html">归档</a>
+          <!--
+          <a class="glow no-decoration" href="/about.html">关于</a>
+          -->
+        </nav>
+        <a class="logo no-decoration" href="/">
+          <i class="logo-h fa fa-h-square"></i> 
+          <span class="logo-arttle glow">arttle</span>
+          <span class="logo-land">Land</span>
+        </a>
+      </div>
+    </div>
 
-  <body>
+    <div class="site-content"> {{ content }} </div>
 
-    {% include header.html %}
-
-        {{ content }}
+    <a href="#body" id="site-scroll-top" class="animate">
+      <span class="fa fa-chevron-up"></span>
+    </a>
 
     {% include footer.html %}
-    {% include backToTop.html %}
-    <script src="{{ " /js/main.js" | prepend: site.baseurl }}" charset="utf-8"></script>
-    <script src="{{ " /js/smooth-scroll.min.js" | prepend: site.baseurl }}" charset="utf-8"></script>
-    <script type="text/javascript">
-      smoothScroll.init({
-        speed: 500, // Integer. How fast to complete the scroll in milliseconds
-        easing: 'easeInOutCubic', // Easing pattern to use
-        offset: 20, // Integer. How far to offset the scrolling anchor location in pixels
-      });
-    </script>
-    <!-- <script src="{{ " /js/scroll.min.js " | prepend: site.baseurl }}" charset="utf-8"></script> -->
-  </body>
+    <script defer src="/assets/js/scrolltop.js"></script>
 
+  </body>
 </html>
