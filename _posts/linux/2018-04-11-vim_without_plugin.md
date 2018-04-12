@@ -1,8 +1,7 @@
 ---
-title:  "无插件的vim操作"
-categories: linux
+title: 无插件的vim操作
+category: linux
 tags: vim
-comments: true
 ---
 
 ## 浏览代码
@@ -31,6 +30,8 @@ comments: true
 ```shell
 :ls 
 ```
+
+<!-- more -->
 
 你可以看到Vim打开了几个文件,并且每个文件都有编号，如果你要切换打开的文件，这个时候，你不要按回车（按了也没事，只不过按了就看不到:ls输出的buffer列表了），你可以使用下面的命令切换文件（buffer后面的4表示切到4号文件）：
 
