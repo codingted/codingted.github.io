@@ -33,3 +33,15 @@ An Elasticsearch index is an independent chunk of documents, much like a databas
  > An Elasticsearch index is broken down into chunks: shards. A shard is a Lucene index, so an Elasticsearch index is made up of multiple Lucene indices. This makes sense because Elasticsearch uses Apache Lucene as its core library to index your data and search through it.
 
 
+### Distributed indexing and searching
+
+* indexing 
+
+The Elasticsearch node that receives your indexing request first selects the shard to index the document to. By default, documents are distributed evenly between shards: for each document, the shard is determined by **hashing its ID string**. Each shard has an equal **hash range**, with equal chances of receiving the new document. Once the target shard is determined, the current node forwards the document to the node holding that shard. Subsequently, that indexing operation is replayed by all the replicas of that shard. The indexing command successfully returns after all the available replicas finish indexing the document.
+
+![distribute_indexing_searching](./pic/distribute_indexing_searching.png)
+
+* searching 
+
+With searching, the node that receives the request forwards it to a set of shards containing all your data. Using a round-robin(轮询调度算法), Elasticsearch selects an available shard (which can be primary or replica) and forwards the search request to it. Elasticsearch then gathers results from those shards, aggregates them into a single reply, and forwards the reply back to the client application.  
+By default, primary and replica shards get hit by searches in round-robin, assuming all nodes in your cluster are equally fast (identical hardware and software configurations). If that’s not the case, you can organize your data or configure your shards to prevent the slower nodes from becoming a bottleneck. 
