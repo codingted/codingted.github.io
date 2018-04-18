@@ -54,7 +54,7 @@ defaults:
     values:
       layout: "blog"
 
-gems:
+plugins:
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-paginate
