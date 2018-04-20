@@ -1,5 +1,5 @@
 ---
-title: chrome默认使用goog.com
+title: chrome默认使用google.com
 categories: tools
 tags: chrome
 ---
@@ -11,7 +11,7 @@ tags: chrome
 # 方法
 
 找到如下文件： 
-Windows 路径：`%LOCALAPPDATA%\Google\Chrome\User Data\Default\Preferences` 
-Linux 路径：`~/.config/google-chrome/Default/Preferences`
-Mac 路径：`/Users/yourname/Library/Application Support/Google/Chrome/Default/Preferences`
+Windows 路径：`%LOCALAPPDATA%\Google\Chrome\User Data\Default\Preferences`  
+Linux 路径：`~/.config/google-chrome/Default/Preferences`   
+Mac 路径：`/Users/yourname/Library/Application Support/Google/Chrome/Default/Preferences`   
 文本编辑器打开后替换全文终的 google.co.jp 为 google.com 即可。 
