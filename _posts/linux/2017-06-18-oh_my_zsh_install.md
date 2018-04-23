@@ -1,15 +1,14 @@
 ---
 title: oh my zsh install
 categories: linux
-tags: shell
-comments: true
+tags: linux shell
 ---
 
 ## Basic install
 
 ```
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 apt install zsh
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 <!-- more -->
 
