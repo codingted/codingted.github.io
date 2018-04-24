@@ -26,6 +26,8 @@ $ sudo apt install chromium-bowser
 安装代理插件[proxy SwichyOmega](https://pan.baidu.com/s/1P6EyhF96TasEpOjoBEgQsw)
 启动代理开启google模式（[代理服务器介绍](http://www.codingted.com/2017/08/26/proxy.html)）
 
+<!-- more -->
+
 ### 安装shadowsocks(附:安装pip)
 
 安装pip
@@ -138,6 +140,10 @@ $ sudo apt install npm
 ```bash
 $ sudo apt install youtube_dl
 ```
+
+### calibre(电子文档阅读软件mobi,epub)
+
+[calibre官网地址](https://calibre-ebook.com/)
 
 ### idea快捷键冲突
 
