@@ -2,7 +2,6 @@
 title: env环境变量
 category: linux
 tags: env
-comments: true
 ---
 
 * content
