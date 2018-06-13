@@ -42,5 +42,3 @@ vim _config.yml
 执行 `npm start` 启动，即可访问： <http:/localhost:4000>
 
 [license]: https://github.com/harttle/harttle.github.io/blob/master/LICENSE
-
-test
