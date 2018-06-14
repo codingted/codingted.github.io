@@ -339,6 +339,15 @@ $ git commit -m 'update gitignore'
 
 ```
 
+* 查看HEAD指针在各个分支的移动轨迹
+
+```shell
+$ git reflog 
+
+# 如果想撤回merge的内容那么ORIG_HEAD所指的就是合并之前的节点
+$ git reset --hard ORIG_HEAD
+```
+
 
 
 # 参考链接
