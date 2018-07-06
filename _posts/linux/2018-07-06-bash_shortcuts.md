@@ -39,6 +39,9 @@ comments: true
 `A-Backspace`| 交换光标处和之前的单词
 `C-t`       | 交换光标处和之前的字符
 
+
+<!-- more -->
+
 ## Bang (!) 命令
 
 快捷键      | 说明

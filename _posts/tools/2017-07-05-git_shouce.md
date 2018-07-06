@@ -178,7 +178,7 @@ $ git log --pretty=oneline
 # 更详细的日期信息
 $ git log --pretty=format:"%h - %an, %ar : %s"
 
-# 添加 --graph 显示分支分支衍合
+# 添加 --graph 显示分支衍合
 $ git log --pretty=format:"%h %s" --graph
 
 # 统计个人代码
