@@ -7,7 +7,7 @@
 6 silly lifecycle codingted@1.0.0~prestart: no script for prestart, continuing
 7 info lifecycle codingted@1.0.0~start: codingted@1.0.0
 8 verbose lifecycle codingted@1.0.0~start: unsafe-perm in lifecycle true
-9 verbose lifecycle codingted@1.0.0~start: PATH: /usr/share/npm/bin/node-gyp-bin:/home/zl/git/liang/codingted.github.io/node_modules/.bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin
+9 verbose lifecycle codingted@1.0.0~start: PATH: /usr/share/npm/bin/node-gyp-bin:/home/zl/git/liang/codingted.github.io/node_modules/.bin:/usr/share/jdk/jdk1.8.0_151/bin:/home/zl/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/local/go/bin:/home/zl/.cargo/bin:/home/zl/tools/arcanist/bin:/home/zl/.rvm/bin:/home/zl/.rvm/bin
 10 verbose lifecycle codingted@1.0.0~start: CWD: /home/zl/git/liang/codingted.github.io
 11 silly lifecycle codingted@1.0.0~start: Args: [ '-c',
 11 silly lifecycle   'bundle exec jekyll serve -w --drafts --host 0.0.0.0 --port 80 --incremental' ]
@@ -21,7 +21,7 @@
 13 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:209:5)
 14 verbose pkgid codingted@1.0.0
 15 verbose cwd /home/zl/git/liang/codingted.github.io
-16 error Linux 4.15.0-23-generic
+16 error Linux 4.15.1-041501-generic
 17 error argv "/usr/bin/node" "/usr/bin/npm" "start"
 18 error node v8.10.0
 19 error npm  v3.5.2
