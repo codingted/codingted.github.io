@@ -41,3 +41,4 @@ rsync [OPTION]... rsync://[USER@]HOST[:PORT]/SRC [DEST]
 # 参考链接
 [http://man.linuxde.net/rsync](http://man.linuxde.net/rsync)    
 [http://einverne.github.io/post/2017/07/rsync-introduction.html](http://einverne.github.io/post/2017/07/rsync-introduction.html)    
+[https://www.cnblogs.com/kevingrace/p/6601088.html](https://www.cnblogs.com/kevingrace/p/6601088.html)
