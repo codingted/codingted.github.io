@@ -16,3 +16,10 @@
 * `Lombok Plugin` : lombok 注入setter/getter方法
 * `Key Promoter X` : 点击按钮的快捷键
 
+## Linux
+
+* `IBM plex字体` :　IBM的字体
+* `keynav` :　键盘移动鼠标[https://github.com/jordansissel/keynav](https://github.com/jordansissel/keynav)
+* `brook` : 代理工具[https://github.com/txthinking/brook](https://github.com/txthinking/brook)
+* `百度晚盘命令行客户端` : [https://github.com/iikira/BaiduPCS-Go](https://github.com/iikira/BaiduPCS-Go)
+
