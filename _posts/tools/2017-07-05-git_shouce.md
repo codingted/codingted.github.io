@@ -123,6 +123,9 @@ $ git blame [file]
 # 显示文件的修改历史（包含文件的修改内容）
 $ git log -p fileName
 
+# 显示包含指定关键字的提交
+$ git log --grep 
+
 # 显示暂存区和工作区的差异
 $ git diff
 
