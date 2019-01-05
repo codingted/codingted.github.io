@@ -22,5 +22,5 @@
 * `keynav` :　键盘移动鼠标[https://github.com/jordansissel/keynav](https://github.com/jordansissel/keynav)
 * `brook` : 代理工具[https://github.com/txthinking/brook](https://github.com/txthinking/brook)
 * `百度晚盘命令行客户端` : [https://github.com/iikira/BaiduPCS-Go](https://github.com/iikira/BaiduPCS-Go)
-* `nnn`
-
+* `x` 通用解压命t 
+* `nnn` 命令行文件管理:[https://github.com/jarun/nnn](https://github.com/jarun/nnn)
