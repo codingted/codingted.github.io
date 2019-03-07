@@ -10,7 +10,7 @@ chrome
 
 ## idea
 
-* `ideaVim` : idea 的vim操作
+* `ideaVim` : idea 的vim操作[https://github.com/JetBrains/ideavim](https://github.com/JetBrains/ideavimF)
 * `acejump` : 位置跳转[链接](https://github.com/acejump/AceJump)
 * `Alibaba java Coding Guidelines` : 阿里编码规范
 * `FindBugs-IDE` : [http://findbugs.sourceforge.net/](http://findbugs.sourceforge.net/)
