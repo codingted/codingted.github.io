@@ -28,3 +28,7 @@ chrome
 * `xrandr` 命令行文件管理:[https://github.com/ranger/ranger.git](https://github.com/ranger/ranger.git)
 * `i3` 窗口管理工具:[https://i3wm.org/docs/userguide.html](https://i3wm.org/docs/userguide.html)
 * `autorandr` 外接屏幕自适应工具：[https://github.com/phillipberndt/autorandr.git](https://github.com/phillipberndt/autorandr.git)
+* `tmux` 
+* `urxvt`
+* `vim/vundle`
+* `xx-net`
