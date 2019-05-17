@@ -16,6 +16,8 @@ chrome
 * `FindBugs-IDE` : [http://findbugs.sourceforge.net/](http://findbugs.sourceforge.net/)
 * `Lombok Plugin` : lombok 注入setter/getter方法
 * `Key Promoter X` : 点击按钮的快捷键
+* `MybatisX`: mybatis 插件
+* `Redis`: redis客户端
 
 ## Linux
 
@@ -32,3 +34,4 @@ chrome
 * `urxvt`
 * `vim/vundle`
 * `xx-net`
+* `trash`
