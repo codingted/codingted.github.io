@@ -35,6 +35,9 @@ tags:  db isolation
 
 在基于锁机制并发控制的DBMS实现可串行化，要求在选定对象上的读锁和写锁保持直到事务结束后才能释放。在SELECT 的查询中使用一个“WHERE”子句来描述一个范围时应该获得一个*范围锁（range-locks）*。这种机制可以避免“幻读”（phantom reads）现象。
 
-[MySQL Gap Lock问题](https://www.cnblogs.com/diegodu/p/9239200.html)
-[事务隔离](https://en.wikipedia.org/wiki/Isolation_(database_systems))
-[innodb locking transaction model](https://dev.mysql.com/doc/refman/8.0/en/innodb-locking-transaction-model.html)
+## 参考链接
+
+[MySQL Gap Lock问题](https://www.cnblogs.com/diegodu/p/9239200.html)  
+[事务隔离](https://en.wikipedia.org/wiki/Isolation_(database_systems))  
+[innodb locking transaction model](https://dev.mysql.com/doc/refman/8.0/en/innodb-locking-transaction-model.html)  
+[innodb transaction isolation levels](https://dev.mysql.com/doc/refman/8.0/en/innodb-transaction-isolation-levels.html)  

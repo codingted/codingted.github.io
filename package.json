@@ -1,7 +1,7 @@
 {
   "name": "codingted",
   "version": "1.0.0",
-  "description": "source code for http://codingted.com",
+  "description": "source code for www.codingted.com",
   "devDependencies": {
     "eslint": "^4.2.0",
     "eslint-config-es5": "^0.5.0"
