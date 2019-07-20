@@ -40,8 +40,8 @@ comments: true
 
 ```java
 public class Request {	
-	private int m_value;
-	private String m_description;
+    private int m_value;
+    private String m_description;
 
 	public Request(String description, int value)
 	{
