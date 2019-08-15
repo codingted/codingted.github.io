@@ -73,7 +73,7 @@ git remote add origin https://codingted.github.com:codingted/xxx.git
 ```shell
 // 设置github用户名
 $ git config user.name "codingted"
-$ git config user.email "coder.tedzhao@gmail.com"
+$ git config user.email "codingted@gmail.com"
 ```
 
 现在就可以进行git命令操作了（记得添加ssh key 到github中）
