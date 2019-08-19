@@ -35,3 +35,4 @@ chrome
 * `vim/vundle`
 * `xx-net`
 * `trash`
+* `rvm` ruby版本管理工具[https://rvm.io/](https://rvm.io/)
