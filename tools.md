@@ -36,3 +36,4 @@ chrome
 * `xx-net`
 * `trash`
 * `rvm` ruby版本管理工具[https://rvm.io/](https://rvm.io/)
+* `nmcli` 管理无线网络 `nmcli dev wifi connect <myssid> password <mypassword>`
