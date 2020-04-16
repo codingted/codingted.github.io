@@ -31,7 +31,7 @@ chrome
 * `i3` 窗口管理工具:[https://i3wm.org/docs/userguide.html](https://i3wm.org/docs/userguide.html)
 * `autorandr` 外接屏幕自适应工具：[https://github.com/phillipberndt/autorandr.git](https://github.com/phillipberndt/autorandr.git)
 * `tmux` 
-* `urxvt`
+* `urxvt`(rxvt-unicode)
 * `vim/vundle`
 * `xx-net`
 * `trash`

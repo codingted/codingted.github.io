@@ -20,4 +20,6 @@ xprop | grep -i 'class'
 
 > WM_CLASS(STRING) = "urxvt", "URxvt"
 
+## 参考链接
 
+[for_window](https://i3wm.org/docs/userguide.html#for_window)
