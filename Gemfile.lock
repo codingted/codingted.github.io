@@ -246,6 +246,7 @@ DEPENDENCIES
   jekyll-feed
   jekyll-redirect-from
   jekyll-seo-tag
+  jemoji
 
 BUNDLED WITH
    2.0.1
