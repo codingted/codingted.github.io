@@ -43,4 +43,5 @@
 * `Shutter`
 * `Okular`
 * `Calibre`
+* `pulseaudio` 解决声音问题
 
