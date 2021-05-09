@@ -44,4 +44,6 @@
 * `Okular`
 * `Calibre`
 * `pulseaudio` 解决声音问题
+* `neofetch` 命令行艺术显示系统信息
+* `multilockscreen` i3wm 支持双显示器锁屏
 
