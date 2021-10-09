@@ -42,6 +42,9 @@ Host codingted.github.com
     HostName github.com
     User git
     IdentityFile ~/.ssh/id_rsa_codingted
+    # fixup for openssh 8.8 (有一些需要配置例如阿里云)
+    HostKeyAlgorithms +ssh-rsa
+    PubkeyAcceptedKeyTypes +ssh-rsa
 ##codingted  (github 配置)
 Host ted12214.github.com
     HostName github.com
