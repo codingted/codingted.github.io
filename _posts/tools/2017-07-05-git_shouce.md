@@ -365,6 +365,12 @@ fd1/*           忽略目录 fd1 下的全部内容，但保留该目录
 !.gitignore
 ```
 
+* 检查gitignore对一个文件生效的规则
+
+```shell
+$ git check-ignore -v app.class
+```
+
 * 查看HEAD指针在各个分支的移动轨迹
 
 ```shell
