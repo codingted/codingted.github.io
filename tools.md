@@ -40,8 +40,9 @@
 * `nmcli` 管理无线网络 `nmcli dev wifi connect <myssid> password <mypassword>`
 * `nerd font` emoji font
 * `v2ray` : [https://v2ray.com/]
-* `Shutter`
-* `Okular`
+* `Shutter` 屏幕截图
+* `flamshot` 屏幕截图
+* `Okular` PDF文件查看
 * `Calibre`
 * `pulseaudio` 解决声音问题
 * `neofetch` 命令行艺术显示系统信息
@@ -49,3 +50,6 @@
 * `pass` 密码管理工具
 * `tldr` 一个展示命令的使用示例的手册
 * `sddm` 登陆窗口选择不同的桌面环境
+* `screenkey` 桌面显示按键
+* `peek` 屏幕录制
+* `btop` 比htop显示的更全面的信息
