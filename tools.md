@@ -1,5 +1,4 @@
 ## chrome
-
 * `vimium` : Chrome 的键盘化操作,使用vim格式的快捷键
 * `Adblock` : 阻止广告
 * `Markdown Viewer` : markdown 预览
@@ -10,6 +9,20 @@
 * `Saladict`[https://saladict.crimx.com/manual.html] ：在线词典
 * `TamperMonkey`[https://www.tampermonkey.net/] ：‘油猴’浏览器脚本工具
 * `TickTick`[https://www.tampermonkey.net/] ：滴答清单插件
+
+## Edge
+### 插件
+* `Adblock` : 阻止广告
+* `Bitwarden` : 密码管理
+* `Octotree` : github 目录查看
+* `PostWoman` : Http调试工具
+* `Proxy SwitchyOmega` : 代理工具
+* `Saladict`[https://saladict.crimx.com/manual.html] ：在线词典
+* `TamperMonkey`[https://www.tampermonkey.net/] ：‘油猴’浏览器脚本工具
+* `Vimium C` : Chrome 的键盘化操作,使用vim格式的快捷键
+* `floccus`[https://floccus.org/] ：bookmarksynch 
+* `Memos-bber` ：记录灵感
+
 
 
 ## idea

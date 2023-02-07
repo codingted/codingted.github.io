@@ -3,12 +3,18 @@
   "version": "1.0.0",
   "description": "source code for www.codingted.com",
   "devDependencies": {
-    "eslint": "^4.2.0",
-    "eslint-config-es5": "^0.5.0"
+    "eslint": "^5.15.3",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-mocha": "^4.9.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "uglify-js": "^3.4.9"
   },
   "scripts": {
     "lint": "eslint assets/js",
-    "start": "bundle exec jekyll serve -w --drafts --host 0.0.0.0 --port 80 ",
+    "start": "bundle exec jekyll serve -w --drafts --host 0.0.0.0 --port 8088 ",
     "build": "bundle exec jekyll build ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,5 +27,8 @@
   "bugs": {
     "url": "https://github.com/harttle/harttle.github.io/issues"
   },
-  "homepage": "https://github.com/harttle/harttle.github.io#readme"
+  "homepage": "https://github.com/harttle/harttle.github.io#readme",
+  "dependencies": {
+    "bundle": "^2.1.0"
+  }
 }
